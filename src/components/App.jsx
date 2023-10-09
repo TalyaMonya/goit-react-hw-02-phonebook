@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from 'nanoid';
-import { Container, Title, SubTitle, Empty } from "./App.styled";
+import { Layout, Title, SubTitle, Empty } from "./Layout";
 import { ContactForm } from "./ContactForm/ContactForm";
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from "./Filter/Filter";
@@ -14,8 +14,6 @@ export class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    name: '',
-    number: ''
   };
 
   // Додавання нового контакту в список котактів
@@ -64,7 +62,7 @@ export class App extends Component {
     const { filter } = this.state;
 
     return (
-      <Container>
+      <Layout>
         <Title>Your Phonebook</Title>
         <ContactForm onAdd={this.addContact} />
 
@@ -79,7 +77,7 @@ export class App extends Component {
             contacts={visibleContacts}
             onRemoteContact={this.removeContact} />
         )}
-      </Container>
+      </Layout>
     )
   }
 }

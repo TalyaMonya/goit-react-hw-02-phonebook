@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const Container = styled.div`
+export const Layout = styled.div`
     width: 400px;
     padding: 20px 0;
     margin: 0 auto;
